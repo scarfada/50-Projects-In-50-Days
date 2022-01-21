@@ -14,6 +14,7 @@ body{
     height: 100vh;
     overflow: hidden;
     margin: 0;
+    background-color: rgb(188, 188, 221);
 }
 
 .container{
@@ -27,13 +28,14 @@ body{
     background-repeat: no-repeat;
     height: 80vh;
     border-radius: 50px;
-    color: #fff;
+    color: rgb(199, 187, 187);
     cursor: pointer;
     flex: 0.5;
     margin:10px;
-    text-shadow: 1px 1px 2px ;
+    text-shadow: 2px 2px 2px black ;
     position: relative;
     transition: flex 0.7 ease-in;
+    text-align:center;
 
 }
 
@@ -56,7 +58,14 @@ body{
     transition: opacity 0.3s ease-in 0.4s;
 }
 
-@media (max-width: 300px) {
+h2{
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+}
+
+
+@media (max-width: 767px) {
     .container {
       width: 100vw;
     }
