@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: #f6f7fb;
+  background-color: #233a96;
   font-family: 'Muli', sans-serif;
   display: flex;
   align-items: center;
@@ -97,4 +97,11 @@ body {
 .btn:disabled {
   background-color: var(--line-border-empty);
   cursor: not-allowed;
+}
+
+@media screen and (max-width:768){
+
+  .container{
+    max-width: 100%;
+  }
 }
