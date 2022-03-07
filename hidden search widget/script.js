@@ -1,19 +1,20 @@
-const search = document.querySelector('.search')
-const btn = document.querySelector('.btn')
-const input = document.querySelector('.input').value
+const search = document.querySelector(".search");
+const btn = document.querySelector(".btn");
+const input = document.querySelector(".input");
+const formEL = document.querySelector(".form");
 
-btn.addEventListener('click', () => {
-    search.classList.toggle('active')
-    input.focus()
-})
-
-function pesquisarGoogle(){
-
-    const pesquisar = document.querySelector('.input').value;
-    const botaum = document.querySelector('.btn').value;
-   
-    const pesquisando = pesquisar + botaum 
-
+function onSubmit(e) {
+  e.preventDefault();
+  const { value } = input;
+  if (value !== "") {
+    window.open(`https://www.google.com/search?q=${value}`);
+  }
 }
 
-const goolge = addEventListener ('click','window.location.href', pesquisarGoogle);
+formEL.addEventListener("submit", onSubmit);
+
+search.addEventListener("mouseenter", () => {
+  search.classList.add("active");
+  input.focus();
+});
+
